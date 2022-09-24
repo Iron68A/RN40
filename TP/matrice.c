@@ -21,7 +21,7 @@ int main(){
     int scal;
 
     //choix
-    printf("quel operation voulez vous faire ? 1: addition\n 2: soustraction\n 3: mutliplication par un nombre\n 4: division par un nombre \n ");
+    printf("quel operation voulez vous faire ? \n 1: addition\n 2: soustraction\n 3: mutliplication par un nombre\n 4: division par un nombre \n ");
     scanf("%d",&selec);
 
 
