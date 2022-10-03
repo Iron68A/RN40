@@ -5,4 +5,7 @@ sujet TD et TP inclus
 Algo non inclu
 
 # TP 1 
-dans le dossier TP, voir le PDF.
+dans le dossier TP, exercices sur les calculs liés aux matrices
+
+# TP 2 
+Exercices sur le tri, et la recherche d'élément dans un tableau, par méthode séquentielle et dichotomique
