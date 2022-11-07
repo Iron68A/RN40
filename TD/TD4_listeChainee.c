@@ -184,3 +184,12 @@ listeint inversion_liste(listeint l){
     }
     return q;
 }
+
+void test(int p, int v){
+    if(p == 10 or v == 10){
+        printf("oui\n");
+    }
+    else{
+        printf("non\n");
+    }
+}

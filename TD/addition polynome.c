@@ -17,6 +17,14 @@ float valeur_polynome(int n, monome polynome[n], float x) {
   }
   return somme;
 }
+//calcul de valeur_polynome de maniere recursive
+float valeur_polynome_rec(int n, monome polynome[n], float x) {
+  if (n == 0) {
+    return 0;
+  } else {
+    return polynome[n - 1].coeff * pow(x, polynome[n - 1].degre) + valeur_polynome_rec(n - 1, polynome, x);
+  }
+}
 
 
 //somme de deux polynomes
