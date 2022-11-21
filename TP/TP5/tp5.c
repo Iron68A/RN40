@@ -89,6 +89,7 @@ liste trier(liste l){
         return l;
     }
     else if(l->val>l->suivant->val){
+        /*Pas trouver*/
 
 }
 
