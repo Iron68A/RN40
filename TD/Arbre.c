@@ -100,14 +100,8 @@ int videa(arbre a) {
     return 0;
 }
 //ALGO
-/** Algorithme le nombre de noeud d'un arbre binaire
- * Entrées: un arbre binaire a
- * Sortie: un entier n
- * Algo:
- * int nombre(arbe a):
- * si a est vide alors nombre = 0
- * sinon nombre(a) = 1+ nombre(fils_gauche(a)) + nombre(fils_droit(a)) 
- * */
+// Algorithme le nombre de noeud d'un arbre binaire
+
 
 int nbrnoeud(arbre a) {
     if (videa(a)) {
@@ -161,15 +155,9 @@ void afficherlist(liste l){
 }
 
 
-/**
- * Ex1 : ecrire un programme récurssif qui construit la liste inverse d'une liste donnée
- * Entrées: une liste L
- * Sortie: une liste L'
- * Algo:
- * liste inverse(liste L):
- * si L est vide alors inverse = vide
- * sinon L' = ajouter en tete(inverse(suivant(L)),tete(L))
-*/
+
+// Ex1 : ecrire un programme récurssif qui construit la liste inverse d'une liste donnée
+
 
 liste inversel(liste l){
     if(videl(l)){
@@ -180,16 +168,9 @@ liste inversel(liste l){
     }
 } 
 
-/**
-* Ex2 : Ecrire le programme récursif qui teste l'appartenance d'un element à un arbe d'entiers
-* Entrées: un arbre a et un entier x
-* Sortie: un booleen b
-* Algo:
-* booleen appartient(arbre a, int x):
-* si a est vide alors appartient = faux
-* si racine(a) = x alors appartient = vrai
-* sinon appartient = appartient(fils_gauche(a),x) ou appartient(fils_droit(a),x)
-*/
+
+// Ex2 : Ecrire le programme récursif qui teste l'appartenance d'un element à un arbe d'entiers
+
 
 int appartient(arbre a, int x){
     if(videa(a)){
@@ -205,16 +186,9 @@ int appartient(arbre a, int x){
 
 
 
-/**
- * Ex3 : Ecrire le programme récursif qui teste l'égalité de deux arbres données
- * Entrées: deux arbres a1 et a2
- * Sortie: un booleen b
- * Algo:
- * booleen egalite(arbre a1, arbre a2):
- * si a1 est vide et a2 est vide alors egalite = vrai
- * sinon si a1 est vide et a2 n'est pas vide ou a1 n'est pas vide et a2 est vide alors egalite = faux
- * sinon egalite = egalite(fils_gauche(a1),fils_gauche(a2)) et egalite(fils_droit(a1),fils_droit(a2))
- * */
+
+// Ex3 : Ecrire le programme récursif qui teste l'égalité de deux arbres données
+
 
 int egalite(arbre a1, arbre a2){
     if(videa(a1) && videa(a2)){
@@ -228,6 +202,46 @@ int egalite(arbre a1, arbre a2){
     }
 }
 
+//Insertion d'un entier dans un arbre binaire de recherche
+arbre insertionEntier(arbre a, int x){
+    if(videa(a)){
+        return enraciner(x,NULL,NULL);
+    }
+    else{
+        if(x <= a->val){
+            return arbre->fils_gauche = insertionEntier(arbre->fils_gauche,x);
+        }
+        else{
+            return arbre->fils_droit = insertionEntier(arbre->fils_droit,x);
+        }
+    }
+}
+// trier une liste grace à un arbre binaire de recherche
+liste creerliste(liste l){
+    arbre a = NULL;
+    liste p = l;
+    while(p != NULL){
+        a = insertionEntier(a,p->val);
+        p = p->suivant;
+    }
+    return a;
+}
+// passer d'un arbre binaire de recherche à une liste triée
+liste arbreliste(arbre a){
+    if(videa(a)){
+        return NULL;
+    }
+    else{
+        return insertionenfin(arbreliste(fils_gauche(a)),a->val);
+    }
+}
+
+/**
+ * Palindrome(T,a,b)
+ * si a>=b alors retourner vrai
+ * sinon si T[a] = T[b] alors retourner Palindrome(T,a+1,b-1)
+ * 
+*/
 
 
 
